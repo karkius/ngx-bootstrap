@@ -127,10 +127,14 @@ export class BsModalService {
 
     bsModalRef.onHidden = new EventEmitter<any>();
     bsModalRef.onHide = new EventEmitter<any>();
-
+    bsModalRef.onShow = new EventEmitter<any>();
+    bsModalRef.onShown = new EventEmitter<any>();
     this.copyEvent(modalLoader.onBeforeHide, bsModalRef.onHide);
     this.copyEvent(modalLoader.onHidden, bsModalRef.onHidden);
-
+	
+    this.copyEvent(modalLoader.onBeforeShow, bsModalRef.onShow);
+    this.copyEvent(modalLoader.onShown, bsModalRef.onShow);
+	
     return bsModalRef;
   }
 

@@ -25,5 +25,15 @@ export class BsModalRef {
    * Event that is fired when the modal behind the ref finishes hiding
    */
   // tslint:disable-next-line:no-any
-  onHidden: EventEmitter<any>;
+  onHidden: EventEmitter<any>;  
+  /**
+   * Event that is fired when the modal behind the ref starts hiding
+   */
+  // tslint:disable-next-line:no-any
+  onShow: EventEmitter<any>;
+  /**
+   * Event that is fired when the modal behind the ref finishes hiding
+   */
+  // tslint:disable-next-line:no-any
+  onShown: EventEmitter<any>;
 }
